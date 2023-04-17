@@ -11,13 +11,6 @@ class TodoProvider with ChangeNotifier{
     tasklist.add(TodoModel(todotitle: task,complete: false));
     notifyListeners();
   }
-
-  toggleTask( task) {
-    final taskIndex = tasklist.indexOf(task);
-    tasklist[taskIndex].toggleCompleted();
-    notifyListeners();
-  }
-
   deleteTask(task) {
     tasklist.remove(task);
     notifyListeners();

@@ -36,9 +36,9 @@ class _ToDoPageState extends State<ToDoPage> {
           itemBuilder: (context,index)
       {
         return ListTile(
-          leading: Checkbox(
-            onChanged: ((_) => task.toggleTask(task.allTask[index])),
-            value: task.allTask[index].complete,),
+          leading:
+          Icon(Icons.list),
+
           title: Text(task.allTask[index].todotitle),
           trailing: IconButton(
             icon: Icon(Icons.delete),
